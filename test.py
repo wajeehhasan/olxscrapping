@@ -13,4 +13,23 @@ for itm in lit:
 		else:
 			sttr+=x
 	lit2.append(sttr)
-print(lit2)
+title=[]
+price=[]
+for itm in lit2:
+	if "Rs" in itm:
+		price.append(itm)
+	else:
+		title.append(itm)
+
+print(title)
+print(price)
+with open("final_olx_data.txt","w") as file:
+	for count in range(21):
+		file.write("========================================\n")
+		file.write("Mobile: ")
+		file.write(title[count])
+		file.write("\n")
+		file.write("price: ")
+		file.write(price[count])
+		file.write("\n")
+		file.write("=========================================\n")
