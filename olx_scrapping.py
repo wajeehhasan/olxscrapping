@@ -19,6 +19,7 @@ with open("olx_scraped.txt","w") as file:
 	for title in titles:
 		file.write(title.find("h3").get_text())
 with open("olx_scraped.txt","a") as file:
+	file.write("\n")
 	file.write("Now prices")
 	for pr in price:
 		file.write(pr.get_text())
